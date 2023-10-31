@@ -264,11 +264,21 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/noboomu/paypal-java-client</url>
+            <id>s1-release</id>
+            <url>https://maven.s1.solutions/repository/s1-release/</url>
         </repository>
+        <snapshotRepository>
+            <id>s1-snapshot</id>
+            <url>https://maven.s1.solutions/repository/s1-snapshot/</url>
+        </snapshotRepository>
     </distributionManagement>
+    <!--    <distributionManagement>-->
+    <!--        <repository>-->
+    <!--            <id>github</id>-->
+    <!--            <name>GitHub Packages</name>-->
+    <!--            <url>https://maven.pkg.github.com/noboomu/paypal-java-client</url>-->
+    <!--        </repository>-->
+    <!--    </distributionManagement>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
