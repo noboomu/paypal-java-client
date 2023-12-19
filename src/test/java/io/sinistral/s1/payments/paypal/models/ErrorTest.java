@@ -16,17 +16,17 @@ package io.sinistral.s1.payments.paypal.models;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for Error422
+ * Model tests for Error
  */
-public class Error422Test {
-    private final Error422 model = new Error422();
+public class ErrorTest {
+    private final Error model = new Error();
 
     /**
-     * Model tests for Error422
+     * Model tests for Error
      */
     @Test
-    public void testError422() {
-        // TODO: test Error422
+    public void testError() {
+        // TODO: test Error
     }
 
     /**
