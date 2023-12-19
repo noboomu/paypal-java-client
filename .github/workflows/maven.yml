@@ -30,6 +30,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build and deploy with Maven
-      run: mvn -B package --no-transfer-progress --file pom.xml; mvn --batch-mode deploy
+      run: mvn -DskipTests -B package --no-transfer-progress --file pom.xml; mvn --batch-mode deploy
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
