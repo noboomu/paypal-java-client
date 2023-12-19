@@ -66,33 +66,239 @@ public class ErrorDefault extends AbstractOpenApiSchema {
             boolean typeCoercion = ctxt.isEnabled(MapperFeature.ALLOW_COERCION_OF_SCALARS);
             int match = 0;
             JsonToken token = tree.traverse(jp.getCodec()).nextToken();
-            // deserialize Error
+            // deserialize Error400
             try {
                 boolean attemptParsing = true;
                 // ensure that we respect type coercion as set on the client ObjectMapper
-                if (Error.class.equals(Integer.class) || Error.class.equals(Long.class) || Error.class.equals(Float.class) || Error.class.equals(Double.class) || Error.class.equals(Boolean.class) || Error.class.equals(String.class)) {
+                if (Error400.class.equals(Integer.class) || Error400.class.equals(Long.class) || Error400.class.equals(Float.class) || Error400.class.equals(Double.class) || Error400.class.equals(Boolean.class) || Error400.class.equals(String.class)) {
                     attemptParsing = typeCoercion;
                     if (!attemptParsing) {
-                        attemptParsing |= ((Error.class.equals(Integer.class) || Error.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
-                        attemptParsing |= ((Error.class.equals(Float.class) || Error.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
-                        attemptParsing |= (Error.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
-                        attemptParsing |= (Error.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                        attemptParsing |= ((Error400.class.equals(Integer.class) || Error400.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error400.class.equals(Float.class) || Error400.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error400.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error400.class.equals(String.class) && token == JsonToken.VALUE_STRING);
                     }
                 }
                 if (attemptParsing) {
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error.class);
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error400.class);
                     // TODO: there is no validation against JSON schema constraints
                     // (min, max, enum, pattern...), this does not perform a strict JSON
                     // validation, which means the 'match' count may be higher than it should be.
                     match++;
-                    log.log(Level.FINER, "Input data matches schema 'Error'");
+                    log.log(Level.FINER, "Input data matches schema 'Error400'");
                 }
             } catch (Exception e) {
                 // deserialization failed, continue
-                log.log(Level.FINER, "Input data does not match schema 'Error'", e);
+                log.log(Level.FINER, "Input data does not match schema 'Error400'", e);
             }
 
+            // deserialize Error401
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error401.class.equals(Integer.class) || Error401.class.equals(Long.class) || Error401.class.equals(Float.class) || Error401.class.equals(Double.class) || Error401.class.equals(Boolean.class) || Error401.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error401.class.equals(Integer.class) || Error401.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error401.class.equals(Float.class) || Error401.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error401.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error401.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error401.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error401'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error401'", e);
+            }
 
+            // deserialize Error403
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error403.class.equals(Integer.class) || Error403.class.equals(Long.class) || Error403.class.equals(Float.class) || Error403.class.equals(Double.class) || Error403.class.equals(Boolean.class) || Error403.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error403.class.equals(Integer.class) || Error403.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error403.class.equals(Float.class) || Error403.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error403.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error403.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error403.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error403'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error403'", e);
+            }
+
+            // deserialize Error404
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error404.class.equals(Integer.class) || Error404.class.equals(Long.class) || Error404.class.equals(Float.class) || Error404.class.equals(Double.class) || Error404.class.equals(Boolean.class) || Error404.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error404.class.equals(Integer.class) || Error404.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error404.class.equals(Float.class) || Error404.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error404.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error404.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error404.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error404'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error404'", e);
+            }
+
+            // deserialize Error409
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error409.class.equals(Integer.class) || Error409.class.equals(Long.class) || Error409.class.equals(Float.class) || Error409.class.equals(Double.class) || Error409.class.equals(Boolean.class) || Error409.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error409.class.equals(Integer.class) || Error409.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error409.class.equals(Float.class) || Error409.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error409.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error409.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error409.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error409'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error409'", e);
+            }
+
+            // deserialize Error415
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error415.class.equals(Integer.class) || Error415.class.equals(Long.class) || Error415.class.equals(Float.class) || Error415.class.equals(Double.class) || Error415.class.equals(Boolean.class) || Error415.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error415.class.equals(Integer.class) || Error415.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error415.class.equals(Float.class) || Error415.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error415.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error415.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error415.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error415'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error415'", e);
+            }
+
+            // deserialize Error422
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error422.class.equals(Integer.class) || Error422.class.equals(Long.class) || Error422.class.equals(Float.class) || Error422.class.equals(Double.class) || Error422.class.equals(Boolean.class) || Error422.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error422.class.equals(Integer.class) || Error422.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error422.class.equals(Float.class) || Error422.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error422.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error422.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error422.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error422'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error422'", e);
+            }
+
+            // deserialize Error500
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error500.class.equals(Integer.class) || Error500.class.equals(Long.class) || Error500.class.equals(Float.class) || Error500.class.equals(Double.class) || Error500.class.equals(Boolean.class) || Error500.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error500.class.equals(Integer.class) || Error500.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error500.class.equals(Float.class) || Error500.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error500.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error500.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error500.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error500'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error500'", e);
+            }
+
+            // deserialize Error503
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (Error503.class.equals(Integer.class) || Error503.class.equals(Long.class) || Error503.class.equals(Float.class) || Error503.class.equals(Double.class) || Error503.class.equals(Boolean.class) || Error503.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((Error503.class.equals(Integer.class) || Error503.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((Error503.class.equals(Float.class) || Error503.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (Error503.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (Error503.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Error503.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'Error503'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'Error503'", e);
+            }
 
             if (match == 1) {
                 ErrorDefault ret = new ErrorDefault();
@@ -118,15 +324,61 @@ public class ErrorDefault extends AbstractOpenApiSchema {
         super("oneOf", Boolean.FALSE);
     }
 
-    public ErrorDefault(Error o) {
+    public ErrorDefault(Error400 o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-   
+    public ErrorDefault(Error401 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error403 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error404 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error409 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error415 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error422 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error500 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public ErrorDefault(Error503 o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
 
     static {
-        schemas.put("Error", Error.class); 
+        schemas.put("Error400", Error400.class);
+        schemas.put("Error401", Error401.class);
+        schemas.put("Error403", Error403.class);
+        schemas.put("Error404", Error404.class);
+        schemas.put("Error409", Error409.class);
+        schemas.put("Error415", Error415.class);
+        schemas.put("Error422", Error422.class);
+        schemas.put("Error500", Error500.class);
+        schemas.put("Error503", Error503.class);
         JSON.registerDescendants(ErrorDefault.class, Collections.unmodifiableMap(schemas));
     }
 
@@ -138,28 +390,66 @@ public class ErrorDefault extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * Error, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503
+     * Error400, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503
      *
      * It could be an instance of the 'oneOf' schemas.
      * The oneOf child schemas may themselves be a composed schema (allOf, anyOf, oneOf).
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (JSON.isInstanceOf(Error.class, instance, new HashSet<Class<?>>())) {
+        if (JSON.isInstanceOf(Error400.class, instance, new HashSet<Class<?>>())) {
             super.setActualInstance(instance);
             return;
         }
 
-      
+        if (JSON.isInstanceOf(Error401.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
 
-        throw new RuntimeException("Invalid instance type. Must be Error, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503");
+        if (JSON.isInstanceOf(Error403.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error404.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error409.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error415.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error422.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error500.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        if (JSON.isInstanceOf(Error503.class, instance, new HashSet<Class<?>>())) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        throw new RuntimeException("Invalid instance type. Must be Error400, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * Error, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503
+     * Error400, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503
      *
-     * @return The actual instance (Error, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503)
+     * @return The actual instance (Error400, Error401, Error403, Error404, Error409, Error415, Error422, Error500, Error503)
      */
     @Override
     public Object getActualInstance() {
@@ -167,17 +457,105 @@ public class ErrorDefault extends AbstractOpenApiSchema {
     }
 
     /**
-     * Get the actual instance of `Error`. If the actual instance is not `Error`,
+     * Get the actual instance of `Error400`. If the actual instance is not `Error400`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `Error`
-     * @throws ClassCastException if the instance is not `Error`
+     * @return The actual instance of `Error400`
+     * @throws ClassCastException if the instance is not `Error400`
      */
-    public Error getError() throws ClassCastException {
-        return (Error)super.getActualInstance();
+    public Error400 getError400() throws ClassCastException {
+        return (Error400)super.getActualInstance();
     }
 
-    
+    /**
+     * Get the actual instance of `Error401`. If the actual instance is not `Error401`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error401`
+     * @throws ClassCastException if the instance is not `Error401`
+     */
+    public Error401 getError401() throws ClassCastException {
+        return (Error401)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error403`. If the actual instance is not `Error403`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error403`
+     * @throws ClassCastException if the instance is not `Error403`
+     */
+    public Error403 getError403() throws ClassCastException {
+        return (Error403)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error404`. If the actual instance is not `Error404`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error404`
+     * @throws ClassCastException if the instance is not `Error404`
+     */
+    public Error404 getError404() throws ClassCastException {
+        return (Error404)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error409`. If the actual instance is not `Error409`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error409`
+     * @throws ClassCastException if the instance is not `Error409`
+     */
+    public Error409 getError409() throws ClassCastException {
+        return (Error409)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error415`. If the actual instance is not `Error415`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error415`
+     * @throws ClassCastException if the instance is not `Error415`
+     */
+    public Error415 getError415() throws ClassCastException {
+        return (Error415)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error422`. If the actual instance is not `Error422`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error422`
+     * @throws ClassCastException if the instance is not `Error422`
+     */
+    public Error422 getError422() throws ClassCastException {
+        return (Error422)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error500`. If the actual instance is not `Error500`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error500`
+     * @throws ClassCastException if the instance is not `Error500`
+     */
+    public Error500 getError500() throws ClassCastException {
+        return (Error500)super.getActualInstance();
+    }
+
+    /**
+     * Get the actual instance of `Error503`. If the actual instance is not `Error503`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Error503`
+     * @throws ClassCastException if the instance is not `Error503`
+     */
+    public Error503 getError503() throws ClassCastException {
+        return (Error503)super.getActualInstance();
+    }
+
+
 
   /**
    * Convert the instance into URL query string.
@@ -211,9 +589,57 @@ public class ErrorDefault extends AbstractOpenApiSchema {
 
     StringJoiner joiner = new StringJoiner("&");
 
-    if (getActualInstance() instanceof Error) {
+    if (getActualInstance() instanceof Error400) {
         if (getActualInstance() != null) {
-          joiner.add(((Error)getActualInstance()).toUrlQueryString(prefix + "one_of_0" + suffix));
+          joiner.add(((Error400)getActualInstance()).toUrlQueryString(prefix + "one_of_0" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error401) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error401)getActualInstance()).toUrlQueryString(prefix + "one_of_1" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error403) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error403)getActualInstance()).toUrlQueryString(prefix + "one_of_2" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error404) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error404)getActualInstance()).toUrlQueryString(prefix + "one_of_3" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error409) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error409)getActualInstance()).toUrlQueryString(prefix + "one_of_4" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error415) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error415)getActualInstance()).toUrlQueryString(prefix + "one_of_5" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error422) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error422)getActualInstance()).toUrlQueryString(prefix + "one_of_6" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error500) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error500)getActualInstance()).toUrlQueryString(prefix + "one_of_7" + suffix));
+        }
+        return joiner.toString();
+    }
+    if (getActualInstance() instanceof Error503) {
+        if (getActualInstance() != null) {
+          joiner.add(((Error503)getActualInstance()).toUrlQueryString(prefix + "one_of_8" + suffix));
         }
         return joiner.toString();
     }
